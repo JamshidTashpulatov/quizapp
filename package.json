@@ -1,0 +1,15 @@
+{
+  "name": "quizapp",
+  "version": "1.0.0",
+  "description": "Super simple js quiz app",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quiz",
+    "jsquiz"
+  ],
+  "author": "Jamshid",
+  "license": "ISC"
+}

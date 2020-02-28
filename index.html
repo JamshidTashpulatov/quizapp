@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container" style="margin-top: 4rem;">
+      <div id="remove">
+        <section class="hero is-info">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                "ҲУДУДГАЗТАъМИНОТ" АЖ УМУМИЙ ТЕСТДАН ЎТКАЗИШ ТИЗИМИ
+              </h1>
+              <h2 class="subtitle">
+                Тестни бошлашдан аввал қўлланма билан танишиб чиқинг ва қуйидаги
+                формани тўлдиринг.
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <div
+          class="card center"
+          style="margin-top: 5rem;"
+          style="text-align: center; align-items: center;"
+        >
+          <form name="contactForm" method="post">
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <div class="control">
+                    <label for="name">Ф.И.О</label>
+                    <input
+                      class="input is-info"
+                      id="name"
+                      type="text"
+                      placeholder="Ф. И. О Киритинг"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <div class="control">
+                    <label for="phone">Телефон рақамингиз: </label>
+                    <input
+                      class="input is-info"
+                      type="phone"
+                      id="phone"
+                      placeholder="Телефон рақамингизни киритинг"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <button id="start" onclick="submitOrder()" class="button is-info is-rounded">
+            Тестни бошлаш!
+          </button>
+        </div>
+      </div>
+      <div id="quiz" style="display: none;">
+        <div id="question"></div>
+        <!-- <div id="qImg"></div> -->
+        <div id="choices">
+          <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+          <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+          <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+          <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+        </div>
+        <div id="timer">
+          <div id="counter"></div>
+          <div id="btimeGauge"></div>
+          <div id="timeGauge"></div>
+        </div>
+        <div id="progress"></div>
+      </div>
+
+      <div
+        id="scoreContainer"
+        class="modal-content"
+        style="display: none"
+      ></div>
+    </div>
+
+    <!-- <div id="previousOrders"></div> -->
+
+
+
+    <!-- <form id="saveMe">
+      <input type="text" name="name" id="name">
+      <input type="text" name="full-name" id="full-name" />
+      <button type="button" id="save">Save on localStorage</button>
+    </form> -->
+    <!-- Include Firebase Library -->
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script src="quiz.js"></script>
+    <script>
+     
+    </script>
+  </body>
+</html>
